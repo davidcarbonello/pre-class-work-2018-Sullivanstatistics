@@ -58,11 +58,13 @@ then this results in 10 exponentially distributed numbers with a rate \(\lambda=
     plot(exp.draws.1,exp.draws.0.2,col=c("red","blue"),main="exp.draws.1 vs exp.draws.0.2" )
 
 4. We'd now like to compare the properties of each of our vectors. Begin by creating a vector of the means of each of our five distributions in the order we created them and saving this to a variable name of your choice. Using this and other similar vectors, create the following scatterplots and explain in words what is going on:
+    
     means<-c(mean.exp1,mean.exp.2,mean.exp5,mean.exp7.3,mean.exp10)
     rates<-c(1,.2,5,7.3,10)
     sds<-c(sd.exp1,sd.exp.2,sd.exp5,sd.exp7.3,sd.exp10)
 
     a. The five means versus the five rates used to generate the distribution.
+    
     plot(means,rates,pch=20,main="Means vs Rates") 
     plot(rates,means,pch=20)
     The plot suggests that as the means increase, the rates decrease. In other words, for an exponential distribution,
@@ -70,6 +72,7 @@ then this results in 10 exponentially distributed numbers with a rate \(\lambda=
     As the rates increase, the mean decreases and is exemplified in the plot. 
     
     b. The standard deviations versus the rates.
+  
     plot(sds,rates,main="Sds vs Rates")
     plot(rates,sds)
     The plot suggests that the greater the standard deviation, 
@@ -79,6 +82,7 @@ then this results in 10 exponentially distributed numbers with a rate \(\lambda=
     distribution and supported by the plots.
     
     c. The means versus the standard deviations.
+    
     plot(means,sds,main="Means vs Sds")
     means.sds.lm<- lm(sds~ means)
     abline(means.sds.lm)
