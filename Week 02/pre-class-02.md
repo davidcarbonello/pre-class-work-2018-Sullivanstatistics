@@ -71,10 +71,12 @@ then this results in 10 exponentially distributed numbers with a rate \(\lambda=
    
     plot(rates,means,pch=20)
     
-    The plot suggests that as the means increase, the rates decrease. In other words, for an exponential distribution,
-    there is an inverse relationship between the rate and mean, where the rate is lamda and the mean is 1/lamda. 
-    As the rates increase, the mean decreases and is exemplified in the plot. 
-    
+    The plot suggests that as the means increase, the rates decrease indicating a negative relationship between the two. 
+    This negative relationship can be attributed to the nature of an exponential distribution where the rate is lamda, 
+    and the mean is 1/lamda, therefore as the rate increases, the mean will decrease. Also, it is important to note that this     negative relationship is not linear, which is why we see a curved line that begins to straighten out as lamda increases
+    and  1/lamda converges to 0. 
+     
+   
     b. The standard deviations versus the rates.
   
     plot(sds,rates,main="Sds vs Rates")
@@ -98,7 +100,7 @@ then this results in 10 exponentially distributed numbers with a rate \(\lambda=
     The plot suggests that the means and standard deviations of each given distribution
     are equal.This makes sense because they are all exponential distributions, where the mean is 1/lamda,
     and the variance is 1/lambda^2. Taking the square root of the variance implies that both the sd 
-    and mean are 1/lamda, hence we see a linear relationship between the two variables. 
+    and mean are 1/lamda, hence we see a linear relationship between the two variables where y=x, or mean=sd.
 
 
 For each plot, explain in words what's going on.
@@ -156,5 +158,5 @@ For each plot, explain in words what's going on.
    hist(ColMeans)
    
    The histogram resembles a normal distribution with mean at 1. The reason the histogram
-   is approximately normal is because of the Central Limit Theorem which applies because we are
-   dealing with a distribution of means for large n, unlike in question 5b where we are dealing with individual                  observations.
+   is approximately normal is because of the Central Limit Theorem, which applies because we are
+   dealing with a distribution of means with large n, unlike in question 5b where we are dealing with individual                  observations from the expoenetial distribution that are not means.
