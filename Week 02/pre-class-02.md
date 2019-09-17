@@ -46,7 +46,9 @@ then this results in 10 exponentially distributed numbers with a rate \(\lambda=
 
 3. The function `plot()` is the generic function in R for the visual display of data. `hist()` is a function that takes in and bins data as a side effect. To use this function, we must first specify what we'd like to plot.
     a. Use the `hist()` function to produce a histogram of your standard exponential distribution. 
+    
     hist(exp.draws.1)
+    
     b. Use `plot()` with this vector to display the random values from your standard distribution in order.
     plot(sort(exp.draws.1),pch=20)
     c. Now, use `plot()` with two arguments -- any two of your other stored random value vectors -- to create a scatterplot of the two vectors against each other.
