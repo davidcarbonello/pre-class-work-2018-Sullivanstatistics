@@ -108,36 +108,53 @@ For each plot, explain in words what's going on.
 
 5. R's capacity for data and computation is large to what was available 10 years ago. 
     a. To show this, generate 1.1 million numbers from the standard exponential distribution and store them in a vector called `big.exp.draws.1`. Calculate the mean and standard deviation.
+   
     big.exp.draws.1<- rexp(n=1100000)
+    
     mean.big.exp1<-mean(big.exp.draws.1)
+    
     sd.big.exp1<-sd(big.exp.draws.1)
     
     b. Plot a histogram of `big.exp.draws.1`.  Does it match the function \(1-e^{-x}\)?  Should it? 
+    
     hist(big.exp.draws.1,main = " Question 5b")
+   
     plot(1-exp(-x),pch=20)
+    
     The histogram does not match the plot of 1-exp(-x) nor should it. The histogram is essentially the 
     pdf of an exponetial distribution, and 1-exp(-x) is the cdf of an exponential distribution. 
 
     
     c. Find the mean of all of the entries in `big.exp.draws.1` which are strictly greater than 1. You may need to first create a new vector to identify which elements satisfy this.
+    
     WhichGreaterThan1<-which(big.exp.draws.1>1)
+    
     ElementsGreaterThan1<-big.exp.draws.1[WhichGreaterThan1]
+    
     mean(ElementsGreaterThan1)
 
     
     d. Create a matrix, `big.exp.draws.1.mat`, containing the the values in 
 `big.exp.draws.1`, with 1100 rows and 1000 columns. Use this matrix as the input to the `hist()` function and save the result to a variable of your choice. What happens to your data?
-    big.exp.draws.1.mat<-matrix(big.exp.draws.1,nrow=1100,ncol=1000)
-    big.mat.hist<-hist(big.exp.draws.1.mat)
-    Now the 1.1 million values are stored in a matrix with 1100 rows and 1000 columns, therefore there are still 1.1 million       values(ordered pairs/points). Plotting a histogram of this matrix is the same histogram as in part 5b. 
+    
+   big.exp.draws.1.mat<-matrix(big.exp.draws.1,nrow=1100,ncol=1000)
+    
+   big.mat.hist<-hist(big.exp.draws.1.mat)
+    
+   Now the 1.1 million values are stored in a matrix with 1100 rows and 1000 columns, therefore there are still 1.1 million      values(ordered pairs/points). Plotting a histogram of this matrix is the same histogram as in part 5b. 
 
     e. Calculate the mean of the 371st column of `big.exp.draws.1.mat`.
+   
    big.exp.draws.1.mat[,371]
+   
    mean(big.exp.draws.1.mat[,371])
 
     f. Now, find the means of all 1000 columns of `big.exp.draws.1.mat` simultaneously. Plot the histogram of column means.  Explain why its shape does not match the histogram in problem 5b).
+   
    ColMeans<-colMeans(big.exp.draws.1.mat)
+   
    hist(ColMeans)
+   
    The histogram resembles a normal distribution with mean at 1. The reason the histogram
    is approximately normal is because of the Central Limit Theorem which applies because we are
    dealing with a distribution of means for large n, unlike in question 5b where we are dealing with individual                  observations.
