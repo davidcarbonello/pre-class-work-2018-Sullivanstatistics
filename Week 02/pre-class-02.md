@@ -50,8 +50,11 @@ then this results in 10 exponentially distributed numbers with a rate \(\lambda=
     hist(exp.draws.1)
     
     b. Use `plot()` with this vector to display the random values from your standard distribution in order.
+   
     plot(sort(exp.draws.1),pch=20)
+   
     c. Now, use `plot()` with two arguments -- any two of your other stored random value vectors -- to create a scatterplot of the two vectors against each other.
+    
     plot(exp.draws.1,exp.draws.0.2,col=c("red","blue"),main="exp.draws.1 vs exp.draws.0.2" )
 
 4. We'd now like to compare the properties of each of our vectors. Begin by creating a vector of the means of each of our five distributions in the order we created them and saving this to a variable name of your choice. Using this and other similar vectors, create the following scatterplots and explain in words what is going on:
