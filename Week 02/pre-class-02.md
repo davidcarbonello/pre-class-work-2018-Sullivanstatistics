@@ -112,6 +112,7 @@ For each plot, explain in words what's going on.
 `big.exp.draws.1`, with 1100 rows and 1000 columns. Use this matrix as the input to the `hist()` function and save the result to a variable of your choice. What happens to your data?
     big.exp.draws.1.mat<-matrix(big.exp.draws.1,nrow=1100,ncol=1000)
     big.mat.hist<-hist(big.exp.draws.1.mat)
+    # Now the 1.1 million values are stored in a matrix with 1100 rows and 1000 columns, therefore there are still 1.1 million     # values(ordered pairs/points). Plotting a histogram of this matrix is the same histogram as in part 5b. 
 
     e. Calculate the mean of the 371st column of `big.exp.draws.1.mat`.
    big.exp.draws.1.mat[,371]
