@@ -124,7 +124,8 @@ For each plot, explain in words what's going on.
     plot(1-exp(-x),pch=20)
     
     The histogram does not match the plot of 1-exp(-x) nor should it. The histogram is essentially the 
-    pdf of an exponetial distribution, and 1-exp(-x) is the cdf of an exponential distribution. 
+    pdf of an exponetial distribution, and 1-exp(-x) is the cdf of an exponential distribution. This is why the histogram 
+    is the derivative of the the plot of 1-exp(-x), which is the relationship between pdf and cdf. 
 
     
     c. Find the mean of all of the entries in `big.exp.draws.1` which are strictly greater than 1. You may need to first create a new vector to identify which elements satisfy this.
