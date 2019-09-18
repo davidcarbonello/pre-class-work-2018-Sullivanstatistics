@@ -1,5 +1,9 @@
 # pre-class
+```{r}
 
+#This is a comment
+
+```
 
 Make sure you commit this often with meaningful messages. 
 
